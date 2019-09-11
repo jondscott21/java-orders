@@ -18,6 +18,7 @@ public class Agent
     private String workingarea;
     private double commission;
     private String phone;
+    private String country;
 
     @OneToMany(mappedBy = "agent", cascade = CascadeType.ALL)
     @JsonIgnoreProperties("agent")
@@ -27,7 +28,7 @@ public class Agent
     {
     }
 
-    public Agent(String agentname, String workingarea, double commission, String phone)
+    public Agent(String agentname, String workingarea, double commission, String phone, String Country)
     {
         this.agentname = agentname;
         this.workingarea = workingarea;
